@@ -8,9 +8,8 @@ import axios from 'axios'
 import {useParams} from 'react-router'
 
 // assets
-// import post5 from '../../assets/post/post5.jpg'
-// import p1 from '../../assets/post/post1.jpg'
 import avatar from '../../assets/avatar.jpg'
+import cover from '../../assets/cover.png'
 
 function Profile() {
   const [user, setUser] = useState({});
@@ -32,7 +31,7 @@ function Profile() {
                 <div className="profilerighttop">
                     {/* profile cover */}
                   <div className="profilecover">
-                    <img src={user.coverPicture || avatar} alt="" className="profilecoverimg"/>
+                    <img src={user.coverPicture || cover} alt="" className="profilecoverimg"/>
                     <img src={user.profilePicture || avatar} alt="" className="profileuserimg"/>
                   </div>
                   <div className="profileinfo">
