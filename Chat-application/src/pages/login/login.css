@@ -66,6 +66,10 @@
     width: 60%;
     align-self: center;
 }
+.loginRegisterButton a{
+    color: #fff;
+    text-decoration: none;
+}
 @media all and (max-width:760px){
     .loginWrapper{
         flex-wrap: wrap;
