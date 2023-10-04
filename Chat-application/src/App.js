@@ -11,7 +11,7 @@ function App() {
         <Route path="/" exact element={<Home/>}/>
         <Route path="/register" exact element={<Register/>}/>
         <Route path="/login" exact element={<Login/>}/>
-        <Route path="/profile/:id" exact element={<Profile/>}/>
+        <Route path="/profile/:username" exact element={<Profile/>}/>
       </Routes>
     </div>
   );

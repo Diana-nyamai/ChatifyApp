@@ -13,15 +13,21 @@ import cover from '../../assets/cover.png'
 
 function Profile() {
   const [user, setUser] = useState({});
-  const username = useParams().username;
+  const {username} = useParams();
 
   useEffect(() => {
     const fetchUser = async () =>{
-      const res = await axios.get(`http://localhost:5000/api/users?username=${username}`);
-      setUser(res.data);
+      try{
+        const res = await axios.get(`http://localhost:5000/api/users?username=${username}`);
+        setUser(res.data);
+        console.log(`user details ${res.data}`)
+      }
+      catch(err){
+        console.log("Failed to fetch data ", err);
+      }
     }
     fetchUser();   
-  }, []);
+  }, [username]);
   return (
    <>
         <Topbar/>
