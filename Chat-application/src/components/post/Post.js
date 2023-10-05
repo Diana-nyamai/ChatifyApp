@@ -9,7 +9,6 @@ import {format} from 'timeago.js'
 import profile from '../../assets/avatar.jpg';
 import { Link } from 'react-router-dom';
 
-
 function Post({post}) {
     const [like, setLike] = useState(post.likes.length)
     const [isliked, setIsliked] = useState(false)
